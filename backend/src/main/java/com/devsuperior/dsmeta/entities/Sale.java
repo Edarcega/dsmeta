@@ -12,7 +12,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "tb_sales")
-public class Sales implements Serializable {
+public class Sale implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
@@ -25,10 +25,10 @@ public class Sales implements Serializable {
 	private Double amount;
 	private LocalDate date;
 
-	public Sales() {
+	public Sale() {
 	}
 
-	public Sales(Long id, String sellerName, Integer visited, Integer deals, Double amount, LocalDate date) {
+	public Sale(Long id, String sellerName, Integer visited, Integer deals, Double amount, LocalDate date) {
 		this.id = id;
 		this.sellerName = sellerName;
 		this.visited = visited;
@@ -98,7 +98,7 @@ public class Sales implements Serializable {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Sales other = (Sales) obj;
+		Sale other = (Sale) obj;
 		return Objects.equals(id, other.id);
 	}
 
